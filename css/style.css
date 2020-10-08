@@ -1,0 +1,703 @@
+@charset "UTF-8";
+/*
+Demonstration for symptoms check
+Created 2017/09
+*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: #ecf0f1;
+  color: #34495e;
+  padding-top: 0px;
+  margin: 0;
+  text-shadow: white 1px 1px 1px;
+}
+.container {
+  text-align: center;
+  max-width: 1000px;
+  padding-top: 20px;
+}
+.symptoms-cont {
+  padding: 0;
+}
+
+.entry-title {
+  border-bottom: 2px solid;
+  margin: 0 auto 10px;
+}
+.check-title {
+  border-bottom: 3px dotted;
+  margin-top: 100px;
+}
+.end-title {
+  margin-top: 100px;
+}
+
+/* same parameter with Bootstrap --> */
+p {
+  margin: 0 0 10px;
+}
+h2 {
+  font-size: 30px;
+}
+h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 24px;
+}
+/* <-- same parameter with Bootstrap */
+
+h4 {
+  text-align: left;
+}
+h4>i {
+  color: orange;
+  text-shadow: none;
+}
+
+/* Symptoms checkbox position */
+.symptoms-body {
+  position: relative;
+  padding:0;
+  width:364px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom: 10px;
+}
+
+/* body */
+.head {
+  position: absolute;
+  left: 74px;
+  top: 1px;
+}
+.head-b {
+  position: absolute;
+  left: 250px;
+  top: 1px;
+}
+.face {
+  position: absolute;
+  left: 62px;
+  top: 31px;
+}
+.neck {
+  position: absolute;
+  left: 250px;
+  top: 60px;
+}
+.shoulder-r {
+  position: absolute;
+  left: 40px;
+  top: 70px;
+}
+.shoulder-l {
+  position: absolute;
+  left: 100px;
+  top: 70px;
+}
+.breast {
+  position: absolute;
+  left: 60px;
+  top: 100px;
+}
+.stomach {
+  position: absolute;
+  left: 60px;
+  top: 160px;
+}
+.arm-r {
+  position: absolute;
+  left: 22px;
+  top: 110px;
+}
+.arm-l {
+  position: absolute;
+  left: 123px;
+  top: 110px;
+}
+.hand-r {
+  position: absolute;
+  left: 2px;
+  top: 200px;
+}
+.hand-l {
+  position: absolute;
+  left: 140px;
+  top: 200px;
+}
+.thigh-r {
+  position: absolute;
+  left: 54px;
+  top: 225px;
+}
+.thigh-l {
+  position: absolute;
+  left: 95px;
+  top: 225px;
+}
+.leg-r {
+  position: absolute;
+  left: 54px;
+  top: 310px;
+}
+.leg-l {
+  position: absolute;
+  left: 95px;
+  top: 310px;
+}
+.back {
+  position: absolute;
+  left: 245px;
+  top: 90px;
+}
+.lumbar {
+  position: absolute;
+  left: 245px;
+  top: 150px;
+}
+.buttocks {
+  position: absolute;
+  left: 245px;
+  top: 207px;
+}
+
+/* left line */
+.fever {
+  position: absolute;
+  top: 150px;
+  left: 70px;
+}
+.eruption {
+  position: absolute;
+  top: 220px;
+  left: 70px;
+}
+.vomiting {
+  position: absolute;
+  top: 290px;
+  left: 70px;
+}
+.diarrhea {
+  position: absolute;
+  top: 360px;
+  left: 70px;
+}
+.bleeding {
+  position: absolute;
+  top: 430px;
+  left: 70px;
+}
+.paralysis {
+  position: absolute;
+  top: 500px;
+  left: 70px;
+}
+/* right line */
+.cough {
+  position: absolute;
+  top: 150px;
+  right: 70px;
+}
+.phlegm {
+  position: absolute;
+  top: 220px;
+  right: 70px;
+}
+.runny {
+  position: absolute;
+  top: 290px;
+  right: 70px;
+}
+.sneeze {
+  position: absolute;
+  top: 360px;
+  right: 70px;
+}
+.numbness {
+  position: absolute;
+  top: 430px;
+  right: 70px;
+}
+.convulsion {
+  position: absolute;
+  top: 500px;
+  right: 70px;
+}
+
+/*
+身体の部位を選択
+*/
+.symptoms-body input[type="checkbox"] {
+  font-size: 100%;
+  width: 1em;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.symptoms-body input[type="checkbox"]+label {
+  /*display: inline;*/
+  font-size: 21px;
+  opacity: 0;
+  text-shadow: none;
+  margin: 0;
+}
+.symptoms-body input[type="checkbox"]+label:before {
+  display: inline-block;
+  content: "";
+}
+.symptoms-body input[type="checkbox"]+label:before {
+  border-radius: 0.1875em;
+}
+.symptoms-body input[type="checkbox"]:checked+label {
+  color: #d80e0e;
+  background-color: #d80e0e;
+  opacity: 0.5;
+  /*border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  margin: 0;
+  width: 50px;
+  height: 20px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;*/
+}
+.symptoms-body input[type="checkbox"]:focus+label:before {
+  outline: 1px dotted;
+}
+
+/*
+症状・状態・情報を選択
+*/
+.infos, .infos-other, .conditions {
+  margin-bottom: 5px;
+}
+.symptoms input[type="checkbox"],
+.infos input[type="checkbox"],
+.infos-other input[type="checkbox"],
+.conditions input[type="checkbox"] {
+  font-size: 100%;
+  width: 1em;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.symptoms input[type="checkbox"]+label {
+  font-size: 21px;
+}
+.symptoms input[type="checkbox"]+label,
+.infos input[type="checkbox"]+label,
+.infos-other input[type="checkbox"]+label,
+.conditions input[type="checkbox"]+label {
+  border-style: solid;
+  border-radius: 5px;
+  text-shadow: none;
+  margin: 0;
+  width: 480px;
+  height: 65px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.symptoms input[type="checkbox"]+label {
+  width: 220px;
+}
+.pain input[type="checkbox"]+label,
+.breathing input[type="checkbox"]+label,
+.malaise input[type="checkbox"]+label,
+.itch input[type="checkbox"]+label {
+  height: 97px;
+}
+.infos-other input[type="checkbox"]+label {
+  height: 75px;
+}
+.symptoms input[type="checkbox"]+label:before,
+.infos input[type="checkbox"]+label:before,
+.infos-other input[type="checkbox"]+label:before,
+.conditions input[type="checkbox"]+label:before {
+  display: inline-block;
+  content: "";
+}
+.symptoms input[type="checkbox"]+label:before,
+.infos input[type="checkbox"]+label:before,
+.infos-other input[type="checkbox"]+label:before,
+.conditions input[type="checkbox"]+label:before {
+  border-radius: 0.1875em;
+}
+.symptoms input[type="checkbox"]:checked+label,
+.infos input[type="checkbox"]:checked+label,
+.infos-other input[type="checkbox"]:checked+label,
+.conditions input[type="checkbox"]:checked+label {
+  color: #34495e;
+  background-color: #e67373;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  margin: 0;
+  width: 480px;
+  height: 65px;
+  border-radius: 5px;
+}
+.symptoms input[type="checkbox"]:checked+label {
+  width: 220px;
+}
+.pain input[type="checkbox"]:checked+label,
+.breathing input[type="checkbox"]:checked+label,
+.malaise input[type="checkbox"]:checked+label,
+.itch input[type="checkbox"]:checked+label {
+  height: 97px;
+}
+.infos-other input[type="checkbox"]:checked+label {
+  height: 75px;
+}
+.symptoms input[type="checkbox"]:focus+label:before,
+.infos input[type="checkbox"]:focus+label:before,
+.infos-other input[type="checkbox"]:focus+label:before,
+.conditions input[type="checkbox"]:focus+label:before {
+  outline: 1px dotted;
+}
+
+/* Symptoms level */
+.level {
+  border-bottom: 4px dashed #bdc3c7;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  width: 100%;
+  height: 100px;
+  line-height: 90px;
+  margin: 20px auto;
+  letter-spacing: -.07em;
+  text-shadow: white 2px 2px 2px;
+}
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #e74c3c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}​
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: white;
+  border: 2px solid #e74c3c;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.6);
+}
+input[type="range"]::-moz-focus-inner {
+  border: 0;
+}
+@media all and (-ms-high-contrast:none){
+  *::-ms-backdrop, input[type="range"] {
+    height:auto;
+    background: none;
+  }
+}
+.mild {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  width: 200px;
+  float: left;
+  margin-left: 30px;
+}
+.severe {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  width: 200px;
+  float: right;
+  margin-right: 30px;
+}
+.chart {
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(to right, #ecf0f1, #e74c3c);
+  width: 100%;
+  height: 100px;
+}
+#chart1, #chart-1, #chart2, #chart-2, #chart3, #chart-3, #chart4, #chart-4, #chart5, #chart-5,
+#chart6, #chart-6, #chart7, #chart-7, #chart8, #chart-8, #chart9, #chart-9, #chart10, #chart-10 {
+  background: #ecf0f1;
+  width: 5%;
+  height: 100px;
+  border: 2px solid #ecf0f1;
+}
+#chart1 {
+  border-top: 95px solid #ecf0f1;
+}
+#chart-1 {
+  border-top: 90px solid #ecf0f1;
+}
+#chart2 {
+  border-top: 85px solid #ecf0f1;
+}
+#chart-2 {
+  border-top: 80px solid #ecf0f1;
+}
+#chart3 {
+  border-top: 75px solid #ecf0f1;
+}
+#chart-3 {
+  border-top: 70px solid #ecf0f1;
+}
+#chart4 {
+  border-top: 65px solid #ecf0f1;
+}
+#chart-4 {
+  border-top: 60px solid #ecf0f1;
+}
+#chart5 {
+  border-top: 55px solid #ecf0f1;
+}
+#chart-5 {
+  border-top: 50px solid #ecf0f1;
+}
+#chart6 {
+  border-top: 45px solid #ecf0f1;
+}
+#chart-6 {
+  border-top: 40px solid #ecf0f1;
+}
+#chart7 {
+  border-top: 35px solid #ecf0f1;
+}
+#chart-7 {
+  border-top: 30px solid #ecf0f1;
+}
+#chart8 {
+  border-top: 25px solid #ecf0f1;
+}
+#chart-8 {
+  border-top: 20px solid #ecf0f1;
+}
+#chart9 {
+  border-top: 15px solid #ecf0f1;
+}
+#chart-9 {
+  border-top: 10px solid #ecf0f1;
+}
+#chart10 {
+  border-top: 5px solid #ecf0f1;
+}
+#chart-10 {
+  border-top: 0px solid #ecf0f1;
+}
+
+/* Select box | Top page & When did you symptom start? */
+.language {
+  position: relative;
+}
+.language:before {
+  position: absolute;
+  margin-left: 100px;
+  content: "\f107";
+  font-family: "FontAwesome";
+  line-height: 36px;
+  color: #7F878C;
+}
+select {
+  outline: none;
+  background: none transparent;
+  vertical-align: middle;
+  font-size: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 40px;
+  padding: 8px 12px;
+  border:1px solid #ddd;
+  color:#828c9a;
+  width:120px;
+  border-radius:5px;
+}
+select option {
+  background-color: #fff;
+  color: #333;
+}
+#when-day, #when-week, #when-month {
+  width: 350px;
+  margin: auto;
+  text-align: left;
+  float: none;
+}
+#when-day select, #when-week select, #when-month select {
+  margin-right: 10px;
+}
+
+.when-choice {
+  margin-bottom: 30px;
+}
+
+/* Radio button */
+/* labelとradioボタン or labelが隣り合ってる場合にradio or labelの左に余白を付ける */
+label + input[type="radio"],
+label + label {
+  margin-left: 40px;
+}
+.when-choice input {
+  margin-right: 10px;
+}
+
+/* Next button */
+.next-btn {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  outline: none;
+  background: none transparent;
+  vertical-align: middle;
+  font-size: 40px;
+  color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 100px;
+  padding: 0;
+  border:1px solid #ddd;
+  color:#828c9a;
+  width:70px;
+  border-radius:5px;
+}
+
+/* WebStorage Clear button */
+.clear-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  outline: none;
+  background: white;
+  vertical-align: middle;
+  font-size: 25px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0 5px;
+  border:1px solid #ddd;
+  color:#828c9a;
+  border-radius:5px;
+}
+
+/* Top page START button */
+.start {
+  margin: 40px auto;
+}
+#start-btn {
+  outline: none;
+  background: skyblue;
+  vertical-align: middle;
+  font-size: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 300px;
+  height: 100px;
+  padding: 0 10px;
+  border:1px solid #ddd;
+  color:#34495e;
+  border-radius:5px;
+}
+
+/* 5 split for grid system on Bootstrap */
+.col-xs-1-5, .col-sm-1-5, .col-md-1-5, .col-lg-1-5,
+.col-xs-2-5, .col-sm-2-5, .col-md-2-5, .col-lg-2-5,
+.col-xs-3-5, .col-sm-3-5, .col-md-3-5, .col-lg-3-5,
+.col-xs-4-5, .col-sm-4-5, .col-md-4-5, .col-lg-4-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-1-5 {
+  width: 20%;
+  float: left;
+}
+.col-xs-2-5 {
+  width: 40%;
+  float: left;
+}
+
+.col-xs-3-5 {
+  width: 60%;
+  float: left;
+}
+
+.col-xs-4-5 {
+  width: 80%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    width: 20%;
+    float: left;
+  }
+  .col-sm-2-5 {
+    width: 40%;
+    float: left;
+  }
+  .col-sm-3-5 {
+    width: 60%;
+    float: left;
+  }
+  .col-sm-4-5 {
+    width: 80%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+    float: left;
+  }
+  .col-md-2-5 {
+    width: 40%;
+    float: left;
+  }
+  .col-md-3-5 {
+    width: 60%;
+    float: left;
+  }
+  .col-md-4-5 {
+    width: 80%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1-5 {
+    width: 20%;
+    float: left;
+  }
+  .col-lg-2-5 {
+    width: 40%;
+    float: left;
+  }
+  .col-lg-3-5 {
+    width: 60%;
+    float: left;
+  }
+  .col-lg-4-5 {
+    width: 80%;
+    float: left;
+  }
+}
+
+.row-eq-height {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-wrap: wrap;
+}

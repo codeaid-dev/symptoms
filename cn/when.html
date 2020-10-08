@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created 2017/09 -->
+  <!-- demonstration for symptoms check -->
+  <head>
+    <meta charset="utf-8">
+    <title>从什么时候开始出现的？</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form method="get">
+      <div class="entry-title">
+        <h2>从什么时候开始出现的？</h2>
+        <h3>(いつからですか？)</h3>
+      </div>
+
+      <div class="when-choice">
+        <label><input type="radio" name="when" id="choice-day" value="when-day" onclick="changeSelect();" checked="checked" />天(日)</label>
+        <label><input type="radio" name="when" id="choice-week" value="when-week" onclick="changeSelect();" />周(週)</label>
+        <label><input type="radio" name="when" id="choice-month" value="when-month" onclick="changeSelect();" />月(月)</label>
+      </div>
+
+      <div class="row" id="when-day">
+      <div class="col-xs-12">
+        <select name="day" id="day">
+          <option value="day1" selected>01</option>
+          <option value="day2">02</option>
+          <option value="day3">03</option>
+          <option value="day4">04</option>
+          <option value="day5">05</option>
+          <option value="day6">06</option>
+        </select>天前(日前)
+      </div>
+      </div>
+
+      <div class="row" id="when-week" style="display: none;">
+      <div class="col-xs-12">
+        <select name="week" id="week">
+          <option value="week1" selected>01</option>
+          <option value="week2">02</option>
+          <option value="week3">03</option>
+          <option value="week4">04</option>
+        </select>周前(週間前)
+      </div>
+      </div>
+
+      <div class="row" id="when-month" style="display: none;">
+      <div class="col-xs-12">
+        <select name="month" id="month">
+          <option value="month1" selected>01</option>
+          <option value="month2">02</option>
+          <option value="month3">03</option>
+          <option value="month4">04</option>
+          <option value="month5">05</option>
+          <option value="month6">06</option>
+          <option value="month7">07</option>
+          <option value="month8">08</option>
+          <option value="month9">09</option>
+          <option value="month10">10</option>
+          <option value="month11">11</option>
+          <option value="month12">12</option>
+        </select>个月前(ヶ月前)
+      </div>
+      </div>
+      </form>
+
+      <div class="next">
+        <button class="next-btn" onclick="setStorage();location.href = 'level.html'"><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <div class="clear">
+        <button class="clear-btn" onclick="removeStorage()">重設(クリア)</button>
+      </div>
+
+    </div>
+
+    <script>
+      function changeSelect(){
+        radio = document.getElementsByName('when');
+        if(radio[0].checked) {
+          document.getElementById('when-day').style.display = "block";
+          document.getElementById('when-week').style.display = "none";
+          document.getElementById('when-month').style.display = "none";
+        } else if(radio[1].checked) {
+          document.getElementById('when-day').style.display = "none";
+          document.getElementById('when-week').style.display = "block";
+          document.getElementById('when-month').style.display = "none";
+        } else if(radio[2].checked) {
+          document.getElementById('when-day').style.display = "none";
+          document.getElementById('when-week').style.display = "none";
+          document.getElementById('when-month').style.display = "block";
+        }
+      }
+    </script>
+
+    <script>
+      // キャッシュによる表示をせず常にページをリロード
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+          location.reload();
+        }
+      });
+    </script>
+
+    <script src="../js/storage.js"></script>
+  </body>
+</html>

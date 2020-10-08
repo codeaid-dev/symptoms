@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created 2017/09 -->
+  <!-- demonstration for symptoms check -->
+  <head>
+    <meta charset="utf-8">
+    <title>Symptoms Informations</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form method="get">
+      <div class="entry-title">
+        <H3>You may be asked to provide the information listed below to identify the source of infection in order to prevent its spread.</H3>
+        <p>(感染源の推定や感染拡大防止のために、下記の情報提供を求められることがあります。)</p>
+      </div>
+
+      <h4><i class="fa fa-circle fa-fw"></i>History of Vaccinations (予防接種歴)</h4>
+      <div class="row infos">
+        <div class="col-xs-1-5">
+          <div class="measles">
+            <input type="checkbox" name="info" id="measles" value="measles"/>
+            <label for="measles">Measles<br>(麻しん)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="rubella">
+            <input type="checkbox" name="info" id="rubella" value="rubella"/>
+            <label for="rubella">Rubella<br>(風しん)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="meningococcus">
+            <input type="checkbox" name="info" id="meningococcus" value="meningococcus"/>
+            <label for="meningococcus">Meningococcus<br>(髄膜炎菌)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="encephalitis">
+            <input type="checkbox" name="info" id="encephalitis" value="encephalitis"/>
+            <label for="encephalitis" style="font-size:14px;">Japanese encephalitis<br>(日本脳炎)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="yellowfever">
+            <input type="checkbox" name="info" id="yellowfever" value="yellowfever"/>
+            <label for="yellowfever">Yellow fever<br>(黄熱)</label>
+          </div>
+        </div>
+      </div>
+      <div class="row infos">
+        <div class="col-xs-1-5">
+          <div class="rabies">
+            <input type="checkbox" name="info" id="rabies" value="rabies"/>
+            <label for="rabies">Rabies<br>(狂犬病)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="hepatitis-a">
+            <input type="checkbox" name="info" id="hepatitis-a" value="hepatitis-a"/>
+            <label for="hepatitis-a">Hepatitis A<br>(A型肝炎)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="tetanus">
+            <input type="checkbox" name="info" id="tetanus" value="tetanus"/>
+            <label for="tetanus">Tetanus<br>(破傷風)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="hepatitis-b">
+            <input type="checkbox" name="info" id="hepatitis-b" value="hepatitis-b"/>
+            <label for="hepatitis-b">Hepatitis B<br>(B型肝炎)</label>
+          </div>
+        </div>
+        <div class="col-xs-1-5">
+          <div class="polio">
+            <input type="checkbox" name="info" id="polio" value="polio"/>
+            <label for="polio">Polio<br>(ポリオ)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row infos">
+        <div class="col-xs-3">
+          <div class="chickenpox">
+            <input type="checkbox" name="info" id="chickenpox" value="chickenpox"/>
+            <label for="chickenpox">Chickenpox<br>(水痘)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="influenza">
+            <input type="checkbox" name="info" id="influenza" value="influenza"/>
+            <label for="influenza">Influenza<br>(インフルエンザ)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="mumps">
+            <input type="checkbox" name="info" id="mumps" value="mumps"/>
+            <label for="mumps">Mumps<br>(流行性耳下腺炎)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="malaria">
+            <input type="checkbox" name="info" id="malaria" value="malaria"/>
+            <label for="malaria" style="font-size:14px;">Malaria (Preventive Medicine)<br>(マラリア(予防薬))</label>
+          </div>
+        </div>
+      </div>
+
+      <h4><i class="fa fa-circle fa-fw"></i>Other (その他)</h4>
+      <div class="row infos-other">
+        <div class="col-xs-6">
+          <div class="companions">
+            <input type="checkbox" name="info" id="companions" value="companions"/>
+            <label for="companions">Have travel companions.<br>(同行者がいる)</label>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="samewithcomps">
+            <input type="checkbox" name="info" id="samewithcomps" value="samewithcomps"/>
+            <label for="samewithcomps">Your travel companions have the same symptoms as you do.<br>(同行者に同じ症状がある)</label>
+          </div>
+        </div>
+      </div>
+      <div class="row infos-other">
+        <div class="col-xs-6">
+          <div class="animals">
+            <input type="checkbox" name="info" id="animals" value="animals"/>
+            <label for="animals">Had contact with animals within 2 weeks.<br>(Birds/Camels/Other)<br>(2週間以内に動物との接触があった(鳥/ラクダ/その他))</label>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="bug">
+            <input type="checkbox" name="info" id="bug" value="bug"/>
+            <label for="bug">Bitten by a bug.<br>(虫に刺された)</label>
+          </div>
+        </div>
+      </div>
+
+      <p>If you have restrictions in daily living or on treatments for religious reasons, please inform the hospital staff in advance.</p>
+      <p>日常生活や宗教上の理由により制限がある場合は、事前に病院スタッフにお知らせください。</p>
+      </form>
+
+      <div class="next">
+        <button class="next-btn" onclick="setStorage();location.href = 'end.html'"><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <div class="clear">
+        <button class="clear-btn" onclick="removeStorage()">Clear</button>
+      </div>
+
+    </div>
+
+    <script>
+      // キャッシュによる表示をせず常にページをリロード
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+          location.reload();
+        }
+      });
+    </script>
+
+    <script src="js/storage.js"></script>
+  </body>
+</html>

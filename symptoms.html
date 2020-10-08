@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created 2017/09 -->
+  <!-- demonstration for symptoms check -->
+  <head>
+    <meta charset="utf-8">
+    <title>Symptoms Body Check</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container symptoms-cont">
+      <form method="get">
+      <div class="entry-title">
+        <h2>What are your symptoms?</h2>
+        <h3>(どんな症状がありますか？)</h3>
+      </div>
+      <p>Where are your symptoms? (体のどこですか？)</p>
+      <div class="symptoms-body">
+        <img src="img/symptoms.png">
+        <div class="bodycheck">
+          <div class="head">
+            <input type="checkbox" name="bodycheck" id="head" value="head"/>
+            <label for="head">■■■</label>
+          </div>
+          <div class="head-b">
+            <input type="checkbox" name="bodycheck" id="head-b" value="head-b"/>
+            <label for="head-b">■■■<br>■■■</label>
+          </div>
+          <div class="face">
+            <input type="checkbox" name="bodycheck" id="face" value="face"/>
+            <label for="face">■■■■■</label>
+          </div>
+          <div class="neck">
+            <input type="checkbox" name="bodycheck" id="neck" value="neck"/>
+            <label for="neck">■■■</label>
+          </div>
+          <div class="shoulder-r">
+            <input type="checkbox" name="bodycheck" id="shoulder-r" value="shoulder-r"/>
+            <label for="shoulder-r">■■■</label>
+          </div>
+          <div class="shoulder-l">
+            <input type="checkbox" name="bodycheck" id="shoulder-l" value="shoulder-l"/>
+            <label for="shoulder-l">■■■</label>
+          </div>
+          <div class="breast">
+            <input type="checkbox" name="bodycheck" id="breast" value="breast"/>
+            <label for="breast">■■■■■<br>■■■■■</label>
+          </div>
+          <div class="stomach">
+            <input type="checkbox" name="bodycheck" id="stomach" value="stomach"/>
+            <label for="stomach">■■■■■<br>■■■■■</label>
+          </div>
+          <div class="arm-r">
+            <input type="checkbox" name="bodycheck" id="arm-r" value="arm-r"/>
+            <label for="arm-r">■■■<br>■■■<br>■■■</label>
+          </div>
+          <div class="arm-l">
+            <input type="checkbox" name="bodycheck" id="arm-l" value="arm-l"/>
+            <label for="arm-l">■■■<br>■■■<br>■■■</label>
+          </div>
+          <div class="hand-r">
+            <input type="checkbox" name="bodycheck" id="hand-r" value="hand-r"/>
+            <label for="hand-r">■■■<br>■■■</label>
+          </div>
+          <div class="hand-l">
+            <input type="checkbox" name="bodycheck" id="hand-l" value="hand-l"/>
+            <label for="hand-l">■■■<br>■■■</label>
+          </div>
+          <div class="thigh-r">
+            <input type="checkbox" name="bodycheck" id="thigh-r" value="thigh-r"/>
+            <label for="thigh-r">■■■<br>■■■<br>■■■</label>
+          </div>
+          <div class="thigh-l">
+            <input type="checkbox" name="bodycheck" id="thigh-l" value="thigh-l"/>
+            <label for="thigh-l">■■■<br>■■■<br>■■■</label>
+          </div>
+          <div class="leg-r">
+            <input type="checkbox" name="bodycheck" id="leg-r" value="leg-r"/>
+            <label for="leg-r">■■■<br>■■■<br>■■■<br>■■■</label>
+          </div>
+          <div class="leg-l">
+            <input type="checkbox" name="bodycheck" id="leg-l" value="leg-l"/>
+            <label for="leg-l">■■■<br>■■■<br>■■■<br>■■■</label>
+          </div>
+          <div class="back">
+            <input type="checkbox" name="bodycheck" id="back" value="back"/>
+            <label for="back">■■■■<br>■■■■</label>
+          </div>
+          <div class="lumbar">
+            <input type="checkbox" name="bodycheck" id="lumbar" value="lumbar"/>
+            <label for="lumbar">■■■■<br>■■■■</label>
+          </div>
+          <div class="buttocks">
+            <input type="checkbox" name="bodycheck" id="buttocks" value="buttocks"/>
+            <label for="buttocks">■■■■</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row symptoms">
+        <div class="pain col-xs-3">
+          <input type="checkbox" name="symptoms" id="pain" value="pain"/>
+          <label for="pain">Pain<br>(痛い)</label>
+        </div>
+        <div class="breathing col-xs-3">
+          <input type="checkbox" name="symptoms" id="breathing" value="breathing"/>
+          <label for="breathing">Breathing difficulty<br>(苦しい)</label>
+        </div>
+        <div class="malaise col-xs-3">
+          <input type="checkbox" name="symptoms" id="malaise" value="malaise"/>
+          <label for="malaise">Malaise<br>(だるい)</label>
+        </div>
+        <div class="itch col-xs-3">
+          <input type="checkbox" name="symptoms" id="itch" value="itch"/>
+          <label for="itch">Itch<br>(かゆい)</label>
+        </div>
+      </div>
+
+      <div class="symptoms">
+        <div class="fever">
+          <input type="checkbox" name="symptoms" id="fever" value="fever"/>
+          <label for="fever">Fever<br>(熱がある)</label>
+        </div>
+        <div class="cough">
+          <input type="checkbox" name="symptoms" id="cough" value="cough"/>
+          <label for="cough">Cough<br>(咳が出る)</label>
+        </div>
+
+        <div class="eruption">
+          <input type="checkbox" name="symptoms" id="eruption" value="eruption"/>
+          <label for="eruption">Eruption<br>(発疹がある)</label>
+        </div>
+        <div class="phlegm">
+          <input type="checkbox" name="symptoms" id="phlegm" value="phlegm"/>
+          <label for="phlegm">Phlegm<br>(痰が出る)</label>
+        </div>
+
+        <div class="vomiting">
+          <input type="checkbox" name="symptoms" id="vomiting" value="vomiting"/>
+          <label for="vomiting">Vomiting<br>(吐いた)</label>
+        </div>
+        <div class="runny">
+          <input type="checkbox" name="symptoms" id="runny" value="runny"/>
+          <label for="runny">Runny nose<br>(鼻水が出る)</label>
+        </div>
+
+        <div class="diarrhea">
+          <input type="checkbox" name="symptoms" id="diarrhea" value="diarrhea"/>
+          <label for="diarrhea">Diarrhea<br>(下痢)</label>
+        </div>
+        <div class="sneeze">
+          <input type="checkbox" name="symptoms" id="sneeze" value="sneeze"/>
+          <label for="sneeze">Sneeze<br>(くしゃみ)</label>
+        </div>
+
+        <div class="bleeding">
+          <input type="checkbox" name="symptoms" id="bleeding" value="bleeding"/>
+          <label for="bleeding">Bleeding<br>(出血)</label>
+        </div>
+        <div class="numbness">
+          <input type="checkbox" name="symptoms" id="numbness" value="numbness"/>
+          <label for="numbness">Numbness<br>(しびれる)</label>
+        </div>
+
+        <div class="paralysis">
+          <input type="checkbox" name="symptoms" id="paralysis" value="paralysis"/>
+          <label for="paralysis">Paralysis<br>(麻痺)</label>
+        </div>
+        <div class="convulsion">
+          <input type="checkbox" name="symptoms" id="convulsion" value="convulsion"/>
+          <label for="convulsion">Convulsion<br>(けいれん)</label>
+        </div>
+      </div>
+      </form>
+
+      <div class="next">
+        <button class="next-btn" onclick="setStorage();location.href = 'when.html'"><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <div class="clear">
+        <button class="clear-btn" onclick="removeStorage()">Clear</button>
+      </div>
+
+    </div>
+
+    <script>
+      // キャッシュによる表示をせず常にページをリロード
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+          location.reload();
+        }
+      });
+    </script>
+
+    <script src="js/storage.js"></script>
+  </body>
+</html>

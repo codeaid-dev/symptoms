@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created 2017/09 -->
+  <!-- demonstration for symptoms check -->
+  <head>
+    <meta charset="utf-8">
+    <title>Symptoms Check Sheet</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form name="langpage" method="get">
+      <div class="index-title">
+        <h2>Please select your language.</h2>
+        <h2>请选择你的语言</h2>
+        <h3>言語を選択してください。</h3>
+      </div>
+      <div class="row">
+      <div class="language col-xs-12">
+        <select name="lang" id="lang">
+          <option value="ja" selected>Japanese</option>
+          <option value="en">English</option>
+          <option value="cn">Chinese</option>
+        </select>
+      </div>
+      </div>
+      <!--<div class="start">
+        <input type="submit" id="start-btn" value="回答する">
+      </div>-->
+      </form>
+
+      <div class="start">
+        <button id="start-btn" onclick="setStorage()">回答する</button>
+      </div>
+    </div>
+
+    <script>
+      // キャッシュによる表示をせず常にページをリロード
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+          location.reload();
+        }
+      });
+    </script>
+
+    <script>
+      var lang = document.getElementById('lang');
+      lang.addEventListener('change', function () {
+        var btn = document.getElementById('start-btn');
+        var val = this.value;
+        if (val == "ja") {
+          btn.innerHTML = "回答する";
+        } else if (val == "en") {
+          btn.innerHTML = "START";
+        } else if (val == "cn") {
+          btn.innerHTML = "回答";
+        }
+      });
+
+      var btn = document.getElementById('start-btn');
+      btn.addEventListener('click', function () {
+        var val = document.langpage.lang.value;
+        if (val == "ja" || val == "en") {
+          location.href = "check.html";
+        } else if (val == "cn") {
+          location.href = "cn/check.html";
+        }
+        setStorage();
+      });
+    </script>
+
+    <script src="js/storage.js"></script>
+  </body>
+</html>

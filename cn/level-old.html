@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created 2017/09 -->
+  <!-- demonstration for symptoms check -->
+  <head>
+    <meta charset="utf-8">
+    <title>所述症状的程度如何？</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form method="get">
+      <div class="entry-title">
+        <h2>所述症状的程度如何？</h2>
+        <h3>(その症状はどの程度ですか？)</h3>
+      </div>
+
+      <div class="row">
+        <div class="mild col-xs-6">
+          <p><span style="font-size: 40px;">些许</span></p>
+          <p>(少し、軽く)</p>
+        </div>
+        <div class="sever col-xs-6">
+          <p><span style="font-size: 40px;">非常严重</span></p>
+          <p>(とても、ひどく)</p>
+        </div>
+      </div>
+
+      <div class="level"><span id="num">1</span>%</div>
+        <input type="range" name="level" id="level" min="0" max="100" step="10" value="0">
+      </form>
+
+      <div class="next">
+        <button class="next-btn" onclick="setStorage();location.href = 'conditions.html'"><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <div class="clear">
+        <button class="clear-btn" onclick="removeStorage()">重設(クリア)</button>
+      </div>
+
+    </div>
+
+    <script>
+      // キャッシュによる表示をせず常にページをリロード
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+          location.reload();
+        }
+      });
+    </script>
+
+    <script>
+      // リアルタイムでレンジ値をページに表示
+      var elem = document.querySelector('input[type="range"]');
+      var rangeValue = function(){
+        var newValue = elem.value;
+        var target = document.querySelector('#num');
+        target.innerHTML = newValue;
+      }
+      elem.addEventListener("input", rangeValue, false);
+    </script>
+
+    <script src="../js/storage.js"></script>
+  </body>
+</html>

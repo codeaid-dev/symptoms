@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <!-- Created 2017/09 -->
+  <!-- demonstration for symptoms check -->
+  <head>
+    <meta charset="utf-8">
+    <title>Symptoms Condition Check</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form method="get">
+      <div class="entry-title">
+        <h2>Do you have any chronic diseases or other conditions?</h2>
+        <h3>(持病等はありますか？)</h3>
+      </div>
+      <div class="row conditions">
+        <div class="col-xs-3">
+          <div class="hypertension">
+            <input type="checkbox" name="symptoms" id="hypertension" value="hypertension"/>
+            <label for="hypertension">Hypertension<br>(高血圧)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="diabetes">
+            <input type="checkbox" name="symptoms" id="diabetes" value="diabetes"/>
+            <label for="diabetes">Diabetes<br>(糖尿病)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="heartdisease">
+            <input type="checkbox" name="symptoms" id="heartdisease" value="heartdisease"/>
+            <label for="heartdisease">Heart disease<br>(心臓病)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="respiratory">
+            <input type="checkbox" name="symptoms" id="respiratory" value="respiratory"/>
+            <label for="respiratory">Respiratory disease<br>(呼吸器疾患)</label>
+          </div>
+        </div>
+      </div>
+      <div class="row conditions">
+        <div class="col-xs-3">
+          <div class="cranialnerve">
+            <input type="checkbox" name="symptoms" id="cranialnerve" value="cranialnerve"/>
+            <label for="cranialnerve">Cranial nerve disease<br>(脳神経疾患)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="cancer">
+            <input type="checkbox" name="symptoms" id="cancer" value="cancer"/>
+            <label for="cancer">Cancer<br>(がん)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="psychiatric">
+            <input type="checkbox" name="symptoms" id="psychiatric" value="psychiatric"/>
+            <label for="psychiatric">Psychiatric disease<br>(精神疾患)</label>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="epilepsy">
+            <input type="checkbox" name="symptoms" id="epilepsy" value="epilepsy"/>
+            <label for="epilepsy">Epilepsy<br>(てんかん)</label>
+          </div>
+        </div>
+      </div>
+      <div class="row conditions">
+        <div class="col-xs-4">
+          <div class="menstruation">
+            <input type="checkbox" name="symptoms" id="menstruation" value="menstruation"/>
+            <label for="menstruation">During menstruation<br>(生理中)</label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="pregnant">
+            <input type="checkbox" name="symptoms" id="pregnant" value="pregnant"/>
+            <label for="pregnant">Pregnant<br>(妊娠中)</label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="other-symptom">
+            <input type="checkbox" name="symptoms" id="other-symptom" value="other-symptom"/>
+            <label for="other-symptom">Other<br>(その他)</label>
+          </div>
+        </div>
+      </div>
+      <div class="entry-title">
+        <h2>Are you allergic to any medicine or food?</h2>
+        <h3>(薬や食べ物でアレルギーはありますか？)</h3>
+      </div>
+      <div class="row conditions">
+        <div class="col-xs-4">
+          <div class="medicine">
+            <input type="checkbox" name="allergy" id="medicine" value="medicine"/>
+            <label for="medicine">Medicine<br>(薬)</label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="food">
+            <input type="checkbox" name="allergy" id="food" value="food"/>
+            <label for="food">Food<br>(食べ物)</label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="other-allergy">
+            <input type="checkbox" name="allergy" id="other-allergy" value="other-allergy"/>
+            <label for="other-allergy">Other<br>(その他)</label>
+          </div>
+        </div>
+      </div>
+      </form>
+
+      <div class="next">
+        <button class="next-btn" onclick="setStorage();location.href = 'informations.html'"><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <div class="clear">
+        <button class="clear-btn" onclick="removeStorage()">Clear</button>
+      </div>
+
+    </div>
+
+    <script>
+      // キャッシュによる表示をせず常にページをリロード
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+          location.reload();
+        }
+      });
+    </script>
+
+    <script src="js/storage.js"></script>
+  </body>
+</html>
